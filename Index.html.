@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalChef - Restaurante en Línea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .purchase-options {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showPurchaseOptions(item) {
+            document.getElementById('purchase-options').style.display = 'block';
+            document.getElementById('item-name').textContent = item;
+        }
+
+        function processPayment() {
+            alert('Por favor, selecciona un método de pago. Esta es solo una demostración.');
+        }
+    </script>
+</head>
+<body>
+    <h1>Bienvenido a DigitalChef</h1>
+    <h2>Menú</h2>
+    <div class="menu">
+        <button onclick="showPurchaseOptions('Postres')">Postres</button>
+        <button onclick="showPurchaseOptions('Comida')">Comida</button>
+    </div>
+    <div id="purchase-options" class="purchase-options">
+        <h3>Comprar <span id="item-name"></span></h3>
+        <button onclick="processPayment()">Pagar con Tarjeta de Crédito/Débito</button>
+        <button onclick="processPayment()">Pagar con PayPal</button>
+        <button onclick="processPayment()">Depósito Bancario</button>
+    </div>
+</body>
+  </html>
